@@ -1,0 +1,21 @@
+{
+  "mahasiswa": [
+    {
+      "id": 1,
+      "nrp": "05111740000195",
+      "nama": "hafidz firman ",
+      "angkatan": "2016",
+      "tgllahir": "1998-11-04",
+      "photo": "",
+      "aktif": true
+    },
+    {
+      "id": 2,
+      "nrp": "05111740000055",
+      "nama": "dani",
+      "angkatan": "2017",
+      "tgllahir": "2020-02-10 00:00:00",
+      "aktif": true
+    }
+  ]
+}
