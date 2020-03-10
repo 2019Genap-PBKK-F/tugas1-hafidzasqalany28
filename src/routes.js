@@ -10,7 +10,7 @@ import SettingView from './components/views/Setting.vue'
 import AccessView from './components/views/Access.vue'
 import ServerView from './components/views/Server.vue'
 import ReposView from './components/views/Repos.vue'
-import ExcelView from './components/views/Excel.vue'
+import Jexcel from './components/views/Jexcel.vue'
 
 // Routes
 const routes = [
@@ -59,10 +59,10 @@ const routes = [
         name: 'Repository',
         meta: {description: 'List of popular javascript repos'}
       }, {
-        path: 'Excel',
-        component: ExcelView,
-        name: 'Excel',
-        meta: {description: 'data mahasiswa'}
+        path: 'jexcel',
+        component: Jexcel,
+        name: 'Jexcel',
+        meta: {description: 'JavaScript Excel'}
       }
     ]
   }, {

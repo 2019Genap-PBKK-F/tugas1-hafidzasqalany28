@@ -1,5 +1,4 @@
 import axios from 'axios'
-import config from '../config'
 
 export default {
   request (method, uri, data = null) {
@@ -13,7 +12,7 @@ export default {
       return
     }
 
-    var url = config.serverURI + uri
+    var url = uri
     return axios({ method, url, data })
   }
 }

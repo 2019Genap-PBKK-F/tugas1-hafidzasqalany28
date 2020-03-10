@@ -13,14 +13,14 @@
         <span class="page">Tables</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/Excel">
-      <a>
-        <i class="fa fa-table"></i>
-        <span class="page">Excel</span>
-      </a>
-    </router-link>
 
     <li class="header">ME</li>
+        <router-link tag="li" class="pageLink" to="/jexcel">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">Jexcel</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/tasks">
       <a>
         <i class="fa fa-tasks"></i>
