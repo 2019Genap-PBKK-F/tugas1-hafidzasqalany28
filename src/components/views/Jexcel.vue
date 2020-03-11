@@ -28,16 +28,16 @@ export default {
   },
   methods: {
     add() {
-      axios.post('http://localhost:8029/api/mahasiswa/').then(res => {
+      axios.post('http://10.199.14.46:8029/api/mahasiswa/').then(res => {
         console.log('adding data in new row')
       })
     },
     update(instance, cell, columns, row, value) {
-      axios.get('http://localhost:8029/api/mahasiswa/').then(res => {
+      axios.get('http://10.199.14.46:8029/api/mahasiswa/').then(res => {
         var index = Object.values(res.data[row])
         index[columns] = value
         console.log(index)
-        axios.put('http://localhost:8029/api/mahasiswa/' + index[0], {
+        axios.put('http://10.199.14.46:8029/api/mahasiswa/' + index[0], {
           id: index[0],
           nrp: index[1],
           nama: index[2],
@@ -50,9 +50,9 @@ export default {
       })
     },
     delete(instance, row) {
-      axios.get('http://localhost:8029/api/mahasiswa/').then(res => {
+      axios.get('http://10.199.14.46:8029/api/mahasiswa/').then(res => {
         var index = Object.values(res.data[row])
-        axios.delete('http://localhost:8029/api/mahasiswa/' + index[0])
+        axios.delete('http://10.199.14.46:8029/api/mahasiswa/' + index[0])
         console.log('delete : row', row, res.data[row])
       })
     }
@@ -61,7 +61,7 @@ export default {
     jexcelOptions() {
       return {
         allowToolbar: true,
-        url: 'http://localhost:8029/api/mahasiswa/',
+        url: 'http://10.199.14.46:8029/api/mahasiswa/',
         oninsertrow: this.add,
         onchange: this.update,
         ondeleterow: this.delete,
