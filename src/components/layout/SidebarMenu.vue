@@ -15,7 +15,31 @@
     </router-link>
 
     <li class="header">ME</li>
-        <router-link tag="li" class="pageLink" to="/jexcel">
+    <router-link tag="li" class="pageLink" to="/datadasar">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">DataDasar</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/kategoriunit">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">kategoriunit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/unit">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/capaian_unit">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">capaian_unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/jexcel">
       <a>
         <i class="fa fa-file-excel-o"></i>
         <span class="page">Jexcel</span>

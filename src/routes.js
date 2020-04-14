@@ -10,8 +10,11 @@ import SettingView from './components/views/Setting.vue'
 import AccessView from './components/views/Access.vue'
 import ServerView from './components/views/Server.vue'
 import ReposView from './components/views/Repos.vue'
+import DataDasar from './components/views/DataDasar.vue'
+import CapaianUnit from './components/views/CapaianUnit.vue'
+import KategoriUnit from './components/views/KategoriUnit.vue'
+import Unit from './components/views/Unit.vue'
 import Jexcel from './components/views/Jexcel.vue'
-
 // Routes
 const routes = [
   {
@@ -58,6 +61,26 @@ const routes = [
         component: ReposView,
         name: 'Repository',
         meta: {description: 'List of popular javascript repos'}
+      }, {
+        path: 'datadasar',
+        component: DataDasar,
+        name: 'DataDasar',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'capaian_unit',
+        component: CapaianUnit,
+        name: 'CapaianUnit',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'kategoriunit',
+        component: KategoriUnit,
+        name: 'KategoriUnit',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'unit',
+        component: Unit,
+        name: 'Unit',
+        meta: {description: 'JavaScript Excel'}
       }, {
         path: 'jexcel',
         component: Jexcel,
