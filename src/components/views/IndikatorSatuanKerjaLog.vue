@@ -5,7 +5,6 @@
         <div>
           <div id="app" ref="spreadsheet"></div>
           <div class="col-md-11">
-            <input type="button" class="btn btn-primary" value="Add Data" @click="() => spreadsheet.insertRow()" />
             <input type="button" class="btn btn-primary" value="Delete Data" @click="() => spreadsheet.deleteRow()" />
             <!-- <input v-on:keyup.46 = spreadsheet.deleteRow()> -->
           </div>
@@ -27,27 +26,10 @@ export default {
     Object.assign(this, { spreadsheet })
   },
   methods: {
-    add () {
-      axios.post('http://localhost:8029/api/datadasar').then(res => {
-        console.log('adding data in new row')
-      })
-    },
-    update (instance, cell, columns, row, value) {
-      axios.get('http://localhost:8029/api/datadasar/').then(res => {
-        var index = Object.values(res.data[row])
-        index[columns] = value
-        console.log(index)
-        axios.put('http://localhost:8029/api/datadasar/' + index[0], {
-          id: index[0],
-          nama: index[1],
-          expired_date: index[4]
-        })
-      })
-    },
     delete (instance, row) {
-      axios.get('http://localhost:8029/api/datadasar').then(res => {
+      axios.get('http://localhost:8029/api/indikatorsatuankerjalog/').then(res => {
         var index = Object.values(res.data[row])
-        axios.delete('http://localhost:8029/api/datadasar/' + index[0])
+        axios.delete('http://localhost:8029/api/indikatorsatuankerjalog/' + index[4])
         console.log('delete : row', row, res.data[row])
       })
     }
@@ -56,7 +38,7 @@ export default {
     jexcelOptions () {
       return {
         allowToolbar: true,
-        url: 'http://localhost:8029/api/datadasar',
+        url: 'http://localhost:8029/api/indikatorsatuankerjalog/',
         oninsertrow: this.add,
         onchange: this.update,
         ondeleterow: this.delete,
@@ -64,11 +46,11 @@ export default {
         pagination: 10,
         csvHeaders: true,
         columns: [
-          { type: 'hidden', title: 'id', width: '10px' },
-          { type: 'text', title: 'Nama', width: '150px' },
-          { type: 'text', title: 'Create Date', width: '250px', readOnly: true },
-          { type: 'text', title: 'Last Update', width: '250px', readOnly: true },
-          { type: 'calendar', title: 'Expired Date', width: '200px' }
+          { type: 'text', title: 'Id Satuan Kerja', width: '150px', readOnly: true },
+          { type: 'text', title: 'Id Master', width: '150px', readOnly: true },
+          { type: 'text', title: 'Id Periode', width: '150px', readOnly: true },
+          { type: 'text', title: 'Capaian', width: '150px', readOnly: true },
+          { type: 'text', title: 'Create Date', width: '200px', readOnly: true }
         //   { type: 'text', title: 'Nama', width: '250px' },
         //   { type: 'dropdown', title: 'Angkatan', width: '80px', source: [ '2019', '2018', '2017', '2016', '2015' ], autocomplete: true },
         //   { type: 'dropdown', title: 'Jenis Kelamin', width: '200px', source: [ 'Laki-laki', 'Perempuan' ], autocomplete: true },

@@ -21,22 +21,52 @@
         <span class="page">DataDasar</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/kategoriunit">
+    <router-link tag="li" class="pageLink" to="/jenissatker">
       <a>
         <i class="fa fa-file-excel-o"></i>
-        <span class="page">kategoriunit</span>
+        <span class="page">JenisSatker</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/unit">
+    <router-link tag="li" class="pageLink" to="/satuankerja">
       <a>
         <i class="fa fa-file-excel-o"></i>
-        <span class="page">unit</span>
+        <span class="page">SatuanKerja</span>
       </a>
     </router-link>
     <router-link tag="li" class="pageLink" to="/capaian_unit">
       <a>
         <i class="fa fa-file-excel-o"></i>
         <span class="page">capaian_unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikatorperiode">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">IndikatorPeriode</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikatorsatuankerja">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">IndikatorSatuanKerja</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikatorsatuankerjalog">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">IndikatorSatuanKerjaLog</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/masterindikator">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">MasterIndikator</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/periode">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">Periode</span>
       </a>
     </router-link>
     <router-link tag="li" class="pageLink" to="/jexcel">

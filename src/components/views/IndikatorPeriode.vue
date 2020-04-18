@@ -30,13 +30,12 @@ export default {
   },
   methods: {
     load () {
-      axios.get('http://localhost:8029/api/capaian_unit/').then(res => {
+      axios.get('http://localhost:8029/api/indikatorperiode/').then(res => {
         console.log(res.data)
         var jexcelOptions = {
           data: res.data,
           allowToolbar: true,
           onchange: this.updateRow,
-          // onbeforechange: this.oldRow,
           oninsertrow: this.newRow,
           ondeleterow: this.deleteRow,
           responsive: true,
@@ -44,10 +43,9 @@ export default {
           pagination: 10,
           csvHeaders: true,
           columns: [
-            { type: 'dropdown', title: 'Id Satuan Kerja', url: 'http://localhost:8029/api/ddsatker', width: '150px' },
-            { type: 'dropdown', title: 'Id Data Dasar', url: 'http://localhost:8029/api/dddatadasar/', width: '150px' },
-            { type: 'text', title: 'Waktu (Timestamp)', width: '220px', readOnly: true },
-            { type: 'text', title: 'Capaian', width: '150px' }
+            { type: 'dropdown', title: 'Id Master Indikator', url: 'http://localhost:8029/api/ddmasterindikator/', width: '150px' },
+            { type: 'dropdown', title: 'Id Periode', url: 'http://localhost:8029/api/ddperiode/', width: '150px' },
+            { type: 'text', title: 'Bobot', width: '220px' }
           ]
         }
         let spreadsheet = jexcel(this.$el, jexcelOptions)
@@ -55,34 +53,30 @@ export default {
       })
     },
     newRow () {
-      axios.post('http://localhost:8029/api/capaian_unit/', this.form).then(res => {
-        console.log(res.data)
+      axios.post('http://localhost:8029/api/indikatorperiode/').then(res => {
+        console.log('adding data in new row')
       })
     },
     updateRow (instance, cell, columns, row, value) {
-      axios.get('http://localhost:8029/api/capaian_unit/').then(res => {
+      axios.get('http://localhost:8029/api/indikatorperiode/').then(res => {
         var index = Object.values(res.data[row])
         var old = Object.values(res.data[row])
         index[columns] = value
-        console.log(old[0] + ' ' + old[1])
-        console.log(index[0] + ' ' + index[1])
-        axios.put('http://localhost:8029/api/capaian_unit/' + old[0] + '&' + old[1] + '&' + old[2], {
-          id_satker: index[0],
-          id_datadasar: index[1],
-          waktu: index[2],
-          capaian: index[3]
+        axios.put('http://localhost:8029/api/indikatorperiode/' + old[0] + '&' + old[1] + '&' + old[2], {
+          id_master: index[0],
+          id_periode: index[1],
+          bobot: index[2]
         }).then(res => {
           console.log(res.data)
         })
       })
     },
     deleteRow (instance, row) {
-      axios.get('http://localhost:8029/api/capaian_unit/').then(res => {
+      axios.get('http://localhost:8029/api/indikatorperiode/').then(res => {
         var index = Object.values(res.data[row])
         // console.log(index)
         console.log(index[0], index[1], index[2])
-        axios.delete('http://localhost:8029/api/capaian_unit/' + index[0] + '&' + index[1] + '&' + index[2], {
-          waktu: index[2]
+        axios.delete('http://localhost:8029/api/indikatorperiode/' + index[0] + '&' + index[1] + '&' + index[2], {
         }).then(res => {
           console.log(res.data)
         })

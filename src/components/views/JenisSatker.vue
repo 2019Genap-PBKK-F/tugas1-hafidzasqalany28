@@ -28,16 +28,16 @@ export default {
   },
   methods: {
     add () {
-      axios.post('http://localhost:8029/api/datadasar').then(res => {
+      axios.post('http://localhost:8029/api/jenissatker/').then(res => {
         console.log('adding data in new row')
       })
     },
     update (instance, cell, columns, row, value) {
-      axios.get('http://localhost:8029/api/datadasar/').then(res => {
+      axios.get('http://localhost:8029/api/jenissatker/').then(res => {
         var index = Object.values(res.data[row])
         index[columns] = value
         console.log(index)
-        axios.put('http://localhost:8029/api/datadasar/' + index[0], {
+        axios.put('http://localhost:8029/api/jenissatker/' + index[0], {
           id: index[0],
           nama: index[1],
           expired_date: index[4]
@@ -45,9 +45,9 @@ export default {
       })
     },
     delete (instance, row) {
-      axios.get('http://localhost:8029/api/datadasar').then(res => {
+      axios.get('http://localhost:8029/api/jenissatker/').then(res => {
         var index = Object.values(res.data[row])
-        axios.delete('http://localhost:8029/api/datadasar/' + index[0])
+        axios.delete('http://localhost:8029/api/jenissatker/' + index[0])
         console.log('delete : row', row, res.data[row])
       })
     }
@@ -56,7 +56,7 @@ export default {
     jexcelOptions () {
       return {
         allowToolbar: true,
-        url: 'http://localhost:8029/api/datadasar',
+        url: 'http://localhost:8029/api/jenissatker/',
         oninsertrow: this.add,
         onchange: this.update,
         ondeleterow: this.delete,
@@ -65,7 +65,7 @@ export default {
         csvHeaders: true,
         columns: [
           { type: 'hidden', title: 'id', width: '10px' },
-          { type: 'text', title: 'Nama', width: '150px' },
+          { type: 'text', title: 'Nama Kategori', width: '150px' },
           { type: 'text', title: 'Create Date', width: '250px', readOnly: true },
           { type: 'text', title: 'Last Update', width: '250px', readOnly: true },
           { type: 'calendar', title: 'Expired Date', width: '200px' }

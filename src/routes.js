@@ -12,8 +12,13 @@ import ServerView from './components/views/Server.vue'
 import ReposView from './components/views/Repos.vue'
 import DataDasar from './components/views/DataDasar.vue'
 import CapaianUnit from './components/views/CapaianUnit.vue'
-import KategoriUnit from './components/views/KategoriUnit.vue'
-import Unit from './components/views/Unit.vue'
+import JenisSatker from './components/views/JenisSatker.vue'
+import SatuanKerja from './components/views/SatuanKerja.vue'
+import IndikatorPeriode from './components/views/IndikatorPeriode.vue'
+import IndikatorSatuanKerja from './components/views/IndikatorSatuanKerja.vue'
+import IndikatorSatuanKerjaLog from './components/views/IndikatorSatuanKerjaLog.vue'
+import MasterIndikator from './components/views/MasterIndikator.vue'
+import Periode from './components/views/Periode.vue'
 import Jexcel from './components/views/Jexcel.vue'
 // Routes
 const routes = [
@@ -72,14 +77,39 @@ const routes = [
         name: 'CapaianUnit',
         meta: {description: 'JavaScript Excel'}
       }, {
-        path: 'kategoriunit',
-        component: KategoriUnit,
-        name: 'KategoriUnit',
+        path: 'jenissatker',
+        component: JenisSatker,
+        name: 'JenisSatker',
         meta: {description: 'JavaScript Excel'}
       }, {
-        path: 'unit',
-        component: Unit,
-        name: 'Unit',
+        path: 'satuankerja',
+        component: SatuanKerja,
+        name: 'SatuanKerja',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'indikatorperiode',
+        component: IndikatorPeriode,
+        name: 'IndikatorPeriode',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'indikatorsatuankerja',
+        component: IndikatorSatuanKerja,
+        name: 'IndikatorSatuanKerja',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'indikatorsatuankerjalog',
+        component: IndikatorSatuanKerjaLog,
+        name: 'IndikatorSatuanKerjaLog',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'masterindikator',
+        component: MasterIndikator,
+        name: 'MasterIndikator',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'periode',
+        component: Periode,
+        name: 'Periode',
         meta: {description: 'JavaScript Excel'}
       }, {
         path: 'jexcel',
