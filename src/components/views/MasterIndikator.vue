@@ -40,11 +40,11 @@ export default {
           csvHeaders: true,
           columns: [
             { type: 'hidden', title: 'id', width: '0px' },
-            { type: 'dropdown', title: 'Id Aspek', url: 'http://localhost:8029/api/aaspek/', width: '100px' },
-            { type: 'dropdown', title: 'Id Pembilang', url: 'http://localhost:8029/api/dddatadasarid/', width: '100px' },
-            { type: 'dropdown', title: 'Id Penyebut', url: 'http://localhost:8029/api/dddatadasarid/', width: '100px' },
-            { type: 'text', title: 'Nama', width: '100px' },
-            { type: 'textbox', title: 'Deskripsi', width: '100px' },
+            { type: 'dropdown', title: 'Aspek', url: 'http://localhost:8029/api/aaspek/', width: '100px' },
+            { type: 'text', title: 'Nama Indikator', width: '100px' },
+            { type: 'textbox', title: 'Deskripsi Indikator', width: '100px' },
+            { type: 'dropdown', title: 'Pembilang', url: 'http://localhost:8029/api/dddatadasarid/', width: '100px' },
+            { type: 'dropdown', title: 'Penyebut', url: 'http://localhost:8029/api/dddatadasarid/', width: '100px' },
             { type: 'text', title: 'Default Bobot', width: '100px' },
             { type: 'text', title: 'Create Date', width: '100px', readOnly: true },
             { type: 'text', title: 'Last Update', width: '100px', readOnly: true },
@@ -68,10 +68,10 @@ export default {
         axios.put('http://localhost:8029/api/masterindikator/' + index[0], {
           id: index[0],
           id_aspek: index[1],
-          id_penyebut: index[2],
-          id_pembilang: index[3],
-          nama: index[4],
-          deskripsi: index[5],
+          nama: index[2],
+          deskripsi: index[3],
+          id_pembilang: index[4],
+          id_penyebut: index[5],
           default_bobot: index[6],
           expired_date: index[9]
         })
