@@ -1,11 +1,19 @@
 <template>
-  <div>
-    <div id="app" ref="spreadsheet"></div>
-    <div>
-        <input type="button" class="btn btn-primary" value="Add New Row" @click="() => spreadsheet.insertRow()" />
-        <input type="button" class="btn btn-primary" value="Delete Selected Row" @click="() => spreadsheet.deleteRow()" />
+  <section class="content">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div id="app" ref="spreadsheet"></div>
+          <div class="col-md-11">
+            <input type="button" class="btn btn-primary" value="Add Data" @click="() => spreadsheet.insertRow()" />
+            <input type="button" class="btn btn-primary" value="Delete Data" @click="() => spreadsheet.deleteRow()" />
+            <!-- <input v-on:keyup.46 = spreadsheet.deleteRow()> -->
+          </div>
+          <hr>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

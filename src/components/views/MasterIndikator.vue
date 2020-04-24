@@ -40,14 +40,15 @@ export default {
           csvHeaders: true,
           columns: [
             { type: 'hidden', title: 'id', width: '0px' },
+            { type: 'dropdown', title: 'Id Aspek', url: 'http://localhost:8029/api/aaspek/', width: '100px' },
             { type: 'dropdown', title: 'Id Pembilang', url: 'http://localhost:8029/api/dddatadasarid/', width: '100px' },
             { type: 'dropdown', title: 'Id Penyebut', url: 'http://localhost:8029/api/dddatadasarid/', width: '100px' },
             { type: 'text', title: 'Nama', width: '100px' },
-            { type: 'textbox', title: 'Deskripsi', width: '150px' },
+            { type: 'textbox', title: 'Deskripsi', width: '100px' },
             { type: 'text', title: 'Default Bobot', width: '100px' },
-            { type: 'text', title: 'Create Date', width: '250px', readOnly: true },
-            { type: 'text', title: 'Last Update', width: '250px', readOnly: true },
-            { type: 'calendar', title: 'Expired Date', width: '200px' }
+            { type: 'text', title: 'Create Date', width: '100px', readOnly: true },
+            { type: 'text', title: 'Last Update', width: '100px', readOnly: true },
+            { type: 'calendar', title: 'Expired Date', width: '100px' }
           ]
         }
         let spreadsheet = jexcel(this.$el, jexcelOptions)
@@ -66,12 +67,13 @@ export default {
         console.log(index)
         axios.put('http://localhost:8029/api/masterindikator/' + index[0], {
           id: index[0],
-          id_penyebut: index[1],
-          id_pembilang: index[2],
-          nama: index[3],
-          deskripsi: index[4],
-          default_bobot: index[5],
-          expired_date: index[8]
+          id_aspek: index[1],
+          id_penyebut: index[2],
+          id_pembilang: index[3],
+          nama: index[4],
+          deskripsi: index[5],
+          default_bobot: index[6],
+          expired_date: index[9]
         })
       })
     },

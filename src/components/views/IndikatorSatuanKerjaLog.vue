@@ -5,6 +5,7 @@
         <div>
           <div id="app" ref="spreadsheet"></div>
           <div class="col-md-11">
+            <input type="button" class="btn btn-primary" value="Add Data" @click="() => spreadsheet.insertRow()" />
             <input type="button" class="btn btn-primary" value="Delete Data" @click="() => spreadsheet.deleteRow()" />
             <!-- <input v-on:keyup.46 = spreadsheet.deleteRow()> -->
           </div>

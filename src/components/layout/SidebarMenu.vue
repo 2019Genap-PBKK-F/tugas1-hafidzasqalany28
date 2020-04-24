@@ -69,6 +69,12 @@
         <span class="page">Periode</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/aspek">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">Aspek</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/jexcel">
       <a>
         <i class="fa fa-file-excel-o"></i>

@@ -19,6 +19,7 @@ import IndikatorSatuanKerja from './components/views/IndikatorSatuanKerja.vue'
 import IndikatorSatuanKerjaLog from './components/views/IndikatorSatuanKerjaLog.vue'
 import MasterIndikator from './components/views/MasterIndikator.vue'
 import Periode from './components/views/Periode.vue'
+import Aspek from './components/views/Aspek.vue'
 import Jexcel from './components/views/Jexcel.vue'
 // Routes
 const routes = [
@@ -110,6 +111,11 @@ const routes = [
         path: 'periode',
         component: Periode,
         name: 'Periode',
+        meta: {description: 'JavaScript Excel'}
+      }, {
+        path: 'aspek',
+        component: Aspek,
+        name: 'Aspek',
         meta: {description: 'JavaScript Excel'}
       }, {
         path: 'jexcel',
