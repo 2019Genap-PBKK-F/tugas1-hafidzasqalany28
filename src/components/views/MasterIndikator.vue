@@ -41,11 +41,12 @@ export default {
           columns: [
             { type: 'hidden', title: 'id', width: '0px' },
             { type: 'dropdown', title: 'Aspek', url: 'http://localhost:8029/api/aaspek/', width: '100px' },
-            { type: 'text', title: 'Nama Indikator', width: '100px' },
-            { type: 'textbox', title: 'Deskripsi Indikator', width: '100px' },
-            { type: 'dropdown', title: 'Pembilang', url: 'http://localhost:8029/api/dddatadasarid/', width: '100px' },
-            { type: 'dropdown', title: 'Penyebut', url: 'http://localhost:8029/api/dddatadasarid/', width: '100px' },
-            { type: 'text', title: 'Default Bobot', width: '100px' },
+            { type: 'dropdown', title: 'Komponen_Aspek', url: 'http://localhost:8029/api/kkomponen_aspek/', width: '100px' },
+            { type: 'dropdown', title: 'Pembilang', url: 'http://localhost:8029/api/dddatadasarid/', width: '150px' },
+            { type: 'dropdown', title: 'Penyebut', url: 'http://localhost:8029/api/dddatadasarid/', width: '150px' },
+            { type: 'text', title: 'Nama Indikator', width: '150px' },
+            { type: 'textbox', title: 'Deskripsi Indikator', width: '150px' },
+            { type: 'text', title: 'Default Bobot', width: '50px' },
             { type: 'text', title: 'Create Date', width: '100px', readOnly: true },
             { type: 'text', title: 'Last Update', width: '100px', readOnly: true },
             { type: 'calendar', title: 'Expired Date', width: '100px' }
@@ -68,12 +69,13 @@ export default {
         axios.put('http://localhost:8029/api/masterindikator/' + index[0], {
           id: index[0],
           id_aspek: index[1],
-          nama: index[2],
-          deskripsi: index[3],
-          id_pembilang: index[4],
-          id_penyebut: index[5],
-          default_bobot: index[6],
-          expired_date: index[9]
+          komponen_aspek: index[2],
+          id_pembilang: index[3],
+          id_penyebut: index[4],
+          nama: index[5],
+          deskripsi: index[6],
+          default_bobot: index[7],
+          expired_date: index[10]
         })
       })
     },
