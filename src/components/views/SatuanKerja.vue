@@ -39,11 +39,13 @@ export default {
         console.log(index)
         axios.put('http://localhost:8029/api/satuankerja/' + index[0], {
           id: index[0],
-          id_jns_satker: index[1],
-          id_induk_satker: index[2],
-          nama: index[3],
-          email: index[4],
-          expired_date: index[7]
+          id_satker: index[1],
+          id_jns_satker: index[2],
+          id_induk_satker: index[3],
+          nama: index[4],
+          level_unit: index[5],
+          email: index[6],
+          expired_date: index[9]
         })
       })
     },
@@ -69,13 +71,15 @@ export default {
         responsive: true,
         columns: [
           { type: 'hidden', title: 'id', width: '10px' },
-          { type: 'dropdown', title: 'Jenis satuankerja', width: '150px', url: 'http://localhost:8029/api/namasatuankerja/' },
-          { type: 'text', title: 'Id induk Satuan Kerja', width: '150px' },
-          { type: 'text', title: 'Nama satuankerja', width: '150px' },
+          { type: 'text', title: 'id_satker', width: '150px' },
+          { type: 'dropdown', title: 'Id_jns_satker', width: '150px', url: 'http://localhost:8029/api/namasatuankerja/' },
+          { type: 'text', title: 'Id_induk_satker', width: '150px' },
+          { type: 'text', title: 'Nama', width: '150px' },
+          { type: 'text', title: 'Level Unit', width: '100px' },
           { type: 'text', title: 'Email', width: '150px' },
-          { type: 'text', title: 'Create Date', width: '150px', readOnly: true },
-          { type: 'text', title: 'Last Update', width: '150px', readOnly: true },
-          { type: 'calendar', title: 'Expired Date', width: '200px' }
+          { type: 'text', title: 'Create Date', width: '100px', readOnly: true },
+          { type: 'text', title: 'Last Update', width: '100px', readOnly: true },
+          { type: 'calendar', title: 'Expired Date', width: '150px' }
         //   { type: 'text', title: 'Nama', width: '250px' },
         //   { type: 'dropdown', title: 'Angkatan', width: '80px', source: [ '2019', '2018', '2017', '2016', '2015' ], autocomplete: true },
         //   { type: 'dropdown', title: 'Jenis Kelamin', width: '200px', source: [ 'Laki-laki', 'Perempuan' ], autocomplete: true },
