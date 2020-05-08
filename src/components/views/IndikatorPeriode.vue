@@ -51,7 +51,7 @@ export default {
           pagination: 10,
           csvHeaders: true,
           columns: [
-            { type: 'dropdown', title: 'Id Master Indikator', url: 'http://localhost:8029/api/ddmasterindikator/', width: '150px' },
+            { type: 'dropdown', title: 'Id Master Indikator', url: 'http://localhost:8029/api/ddmasterindikator/', width: '350px' },
             { type: 'dropdown', title: 'Id Periode', url: 'http://localhost:8029/api/ddperiode/', width: '150px' },
             { type: 'text', title: 'Bobot', width: '220px' }
           ]
