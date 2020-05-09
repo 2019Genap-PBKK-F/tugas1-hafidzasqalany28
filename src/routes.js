@@ -20,7 +20,10 @@ import IndikatorSatuanKerjaLog from './components/views/IndikatorSatuanKerjaLog.
 import MasterIndikator from './components/views/MasterIndikator.vue'
 import Periode from './components/views/Periode.vue'
 import Aspek from './components/views/Aspek.vue'
+import Abmas from './components/views/Abmas.vue'
 import Dosen from './components/views/Dosen.vue'
+import Penelitian from './components/views/Penelitian.vue'
+import Publikasi from './components/views/Publikasi.vue'
 import Jexcel from './components/views/Jexcel.vue'
 // Routes
 const routes = [
@@ -38,6 +41,26 @@ const routes = [
         component: DashboardView,
         name: 'Dashboard',
         meta: {description: 'Overview of environment'}
+      }, {
+        path: 'abmas',
+        component: Abmas,
+        name: 'Abmas',
+        meta: {description: 'Tampilan Webdatarocks'}
+      }, {
+        path: 'dosen',
+        component: Dosen,
+        name: 'Dosen',
+        meta: {description: 'Tampilan Webdatarocks'}
+      }, {
+        path: 'penelitian',
+        component: Penelitian,
+        name: 'Penelitian',
+        meta: {description: 'Tampilan Webdatarocks'}
+      }, {
+        path: 'publikasi',
+        component: Publikasi,
+        name: 'Publikasi',
+        meta: {description: 'Tampilan Webdatarocks'}
       }, {
         path: 'tables',
         component: TablesView,
@@ -117,11 +140,6 @@ const routes = [
         path: 'aspek',
         component: Aspek,
         name: 'Aspek',
-        meta: {description: 'JavaScript Excel'}
-      }, {
-        path: 'dosen',
-        component: Dosen,
-        name: 'Dosen',
         meta: {description: 'JavaScript Excel'}
       }, {
         path: 'jexcel',

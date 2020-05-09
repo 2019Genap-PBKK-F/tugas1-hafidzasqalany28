@@ -57,7 +57,7 @@ export default {
       report: {
         dataSource: {
           dataSourceType: 'json',
-          filename: 'http://10.199.14.46:8029/api/dosen'
+          filename: 'http://10.199.14.46:8029/api/penelitian'
         },
         options: {
           grid: {

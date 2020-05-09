@@ -7,6 +7,30 @@
         <span class="page">Dashboard</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/abmas">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">Abmas</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/dosen">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">Dosen</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/penelitian">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">Penelitian</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/publikasi">
+      <a>
+        <i class="fa fa-file-excel-o"></i>
+        <span class="page">Publikasi</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/tables">
       <a>
         <i class="fa fa-table"></i>
@@ -73,12 +97,6 @@
       <a>
         <i class="fa fa-file-excel-o"></i>
         <span class="page">Aspek</span>
-      </a>
-    </router-link>
-    <router-link tag="li" class="pageLink" to="/dosen">
-      <a>
-        <i class="fa fa-file-excel-o"></i>
-        <span class="page">Dosen</span>
       </a>
     </router-link>
     <router-link tag="li" class="pageLink" to="/jexcel">
